@@ -1,0 +1,495 @@
+
+
+ body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; background-color:white;} /*  #e0f7fa anden: #3f4444; */
+ .container { display: flex; min-height: 100vh; }
+
+ .sidebar { width: 20%; background-color:  white ; padding: 20px; color: #00796b; border-right: 1px solid #00796b; }
+ 
+ .main-content {
+    width: 60%;
+    padding: 20px;
+}
+
+ .right-side {
+    width: 20%; 
+    background-color: white; /* #b2ebf2 anden: #212525; anden: #b7c4c4*/ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Adjust based on your layout */
+    border-left: 1px solid #00796b;
+    /* Keep existing styles */
+}
+
+#authButton {
+    padding: 10px 20px;
+    background-color: #00796b; /* Sample color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Space before any content that might follow */
+}
+
+#authButton:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+
+
+ .profile { margin-bottom: 20px; }
+ .avatar {
+width: 70px; /* Adjust size as needed */
+height: 70px; /* Adjust size as needed */
+border-radius: 50%; /* Makes the image circular */
+margin-right: 10px; /* Adds some space between the avatar and the username */
+float: left; /* Aligns the avatar to the left of the text */
+}
+
+#bubbleContainer {
+    display: flex; /* Aligns child elements (the image and text) horizontally */
+    align-items: center; /* Vertically centers the items in the container */
+    gap: 10px; /* Adjust the gap between the image and text as needed */
+    margin-top: -10px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+}
+
+.bobble_text h2 {
+    margin: 0;
+}
+
+.bobble_text h2 a {
+    font-size: 28px; /* Slightly larger font size for prominence */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #00796b; /* A theme color that stands out */
+    text-decoration: none; /* No underline to keep it clean */
+    letter-spacing: 1px; /* Spacing between letters for a modern look */
+    text-transform: uppercase; /* UPPERCASE letters for a more logo-like appearance */
+    font-family: 'Arial', sans-serif; /* Choose a font that fits your theme */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.bobble_text h2 a:hover {
+    color: #004d40; /* A darker shade or a completely different color on hover */
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Optional: Adds depth on hover */
+}
+
+
+
+#cssBubble {
+    width: 50px;
+    height: 50px;
+    background-color: #00BFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.bubble-img {
+    width: 100px; /* Adjust size as needed */
+    cursor: pointer; /* Indicates the image is clickable */
+    transition: transform 0.3s ease;
+}
+
+.bubble-img:active {
+    transform: scale(1.1); /* Slightly enlarges the bubble on click */
+}
+
+.home-link {
+    margin-bottom: 10px;
+}
+
+.home-link a {
+    display: inline-block;
+    color: #00796b; 
+    text-decoration: none;
+}
+
+.profile h2, .profile p {
+margin: 0; /* Removes default margin to align better with the avatar */
+padding-top: 10px; /* Adds some padding at the top for alignment */
+cursor: pointer; /* Changes the cursor to indicate these are clickable */
+}
+
+ .group { margin-bottom: 10px; font-weight: bold;}
+ .content { margin-bottom: 20px; background-color: white; border-radius: 50px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+ h3 { color: #00796b; }
+
+ /* Styles for .profile and .group hover effect */
+.profile:hover, .groups h3:hover, .group:hover, .home-link a:hover {
+    background-color: rgba(128, 128, 128, 0.5); /* Grey color with opacity */
+    border-radius: 5px; /* Slight round corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Adds some space between the search bar and the game boxes */
+}
+
+#searchInput {
+    padding: 10px;
+    margin-right: 10px; /* Adds some space between the input field and the search button */
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Gives the input field rounded corners */
+    width: 300px; /* Adjusts the width of the search input */
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounds the corners of the button */
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #004d40; /* Darker shade on hover for feedback */
+}
+
+#darkModeToggle {
+    margin-left: 10px; /* Adjust spacing based on your layout */
+    padding: 10px;
+    background-color: #444; /* Dark background for the button */
+    color: white; /* Light text color */
+    border: none;
+    border-radius: 20px; /* Rounds the corners of the button */
+    cursor: pointer;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333; /* Dark grey background for the body */
+    color: white; /* Light text color for contrast */
+}
+
+body.dark-mode .sidebar, 
+body.dark-mode .right-side {
+    background-color: #2c2c2c; /* Slightly different or the same dark grey for sidebar and right-side */
+    color: white; /* Ensure text within these sections is also light-colored for contrast */
+}
+
+/* Optionally, adjust other elements' styles within the sidebar and right-side for dark mode */
+body.dark-mode .sidebar a, 
+body.dark-mode .right-side a {
+    color: #a5a5a5; /* Lighter color for links */
+}
+
+body.dark-mode .profile h2,
+body.dark-mode .profile p {
+    color: white; /* Ensure profile names and descriptions are visible in dark mode */
+}
+
+/* Adjust other elements as needed for dark mode */
+
+/* Adjust other elements as needed for dark mode */
+body.dark-mode .search-container button {
+    background-color: #444; /* Dark background for buttons */
+    color: white; /* Light text */
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #666; /* Different background for the toggle button for contrast */
+}
+
+
+.post-inputs-container {
+    position: relative;
+}
+
+ .new-post {
+margin-bottom: 20px;
+}
+
+textarea#postInput {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0; /* Removes the bottom margin to allow the label to be closer */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Gives the textarea a rounded look */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+.image-upload-label {
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    cursor: pointer;
+}
+
+
+.image-upload-label:hover {
+    background-color: #9fa4a4;
+    border-radius: 50%; /* Makes the hover background circle */
+    transition: background-color 0.3s; /* Smooth transition for the hover effect */
+}
+
+.bottom-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.image-preview-container {
+    position: relative;
+    /* Adjust the height or width as necessary */
+    height: 100px; /* Set a fixed height for the preview container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures the image does not overflow the container */
+}
+
+.image-preview-container img {
+
+    position: relative;
+    max-height: 100px; /* Ensures the preview image fits within the container */
+}
+
+
+
+button#postButton {
+
+float: right; /* Aligns the button to the right */
+padding: 10px 20px;
+background-color: #00796b;
+color: white;
+border: none;
+border-radius: 20px; /* Rounds the corners of the button */
+cursor: pointer;
+}
+
+button#postButton:hover {
+background-color: #004d40;
+}
+
+#postsContainer {
+    margin-top: 50px; /* Adjusts the space between the button and the first posted bobble */
+}
+
+
+ /* Bubble Background CSS */
+ body::after {
+     content: '';
+     position: fixed;
+     top: 0; left: 0;
+     width: 100%; height: 100%;
+     background-image: radial-gradient(circle, #ffffff 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ffffff 20%, transparent 30%);
+     background-size: 50px 50px;
+     background-position: 0 0, 25px 25px;
+     opacity: 0.4;
+     z-index: -1;
+ }
+
+ .games-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Spacing between game boxes and new post area */
+}
+
+.game-box {
+    flex: 1;
+    flex-basis: 0;
+    height: 150px; /* Set the height for your game boxes */
+    margin-right: 10px; /* Spacing between the boxes */
+    background-color: rgb(235, 219, 219);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Size of the 'more...' text */
+    color: #fff; /* Color of the 'more...' text */
+    cursor: pointer; /* Changes the cursor to indicate these are clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+   
+}
+
+.game-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the game box */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow to create depth */
+}
+
+.game-box.more {
+    background-color: rgb(175, 167, 167); 
+   opacity: 0.5;
+    text-align: center;
+}
+
+/* Removes the margin on the last game box */
+.game-box:last-child {
+    margin-right: 0;
+}
+
+.game-link {
+    display: flex; /* This will ensure the link covers the game box area */
+    text-decoration: none; /* Removes underline from links */
+    width: 200px;
+}
+
+.netgame-box {
+    flex: 1;
+    flex-basis: 0;
+    height: 90px; /* Set the height for your game boxes */
+    margin-right: 10px; /* Spacing between the boxes */
+    margin-top: 20px;
+    background-color: rgb(235, 219, 219);
+    background-size: cover;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Size of the 'more...' text */
+    color: #fff; /* Color of the 'more...' text */
+    cursor: pointer; /* Changes the cursor to indicate these are clickable */
+   
+}
+
+.netgame-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the game box */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow to create depth */
+}
+
+.netgame-box.more {
+    background-color: rgb(175, 167, 167); 
+   opacity: 0.5;
+    
+}
+
+/* Removes the margin on the last game box */
+.netgame-box:last-child {
+    margin-right: 0;
+}
+
+.netgame-link {
+    display: flex; /* This will ensure the link covers the game box area */
+    text-decoration: none; /* Removes underline from links */
+    width: 110px;
+}
+
+#chatButton {
+    
+    padding: 10px 20px;
+    margin-top: 10px; /* Spacing from the top or from the previous element */
+    background-color: #4CAF50; /* A green background for visibility */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#chatButton:hover {
+    background-color: #45a049; /* A darker shade of green on hover */
+}
+
+/* Optional: Add a focus style for accessibility */
+#chatButton:focus {
+    outline: 2px solid #333; /* Adds an outline when the button is focused */
+    outline-offset: 2px; /* Space between the button and the outline */
+}
+
+
+.chat-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+
+.chat-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#sendMessageButton {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-chat {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Add styling to ensure the close button is not too prominent */
+.close-chat:hover {
+    color: red;
+}
+
+
+/* For profile.html */
+
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#followButton {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#followButton:hover {
+    background-color: #004d40;
+}
+
+
+
+

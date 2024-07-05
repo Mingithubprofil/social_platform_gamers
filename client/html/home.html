@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobble</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+       
+    </style>
+    <script src="../scripts/home.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div id="bubbleContainer">
+                <img src="images/bobble_brand_picture.png" alt="Bubble" class="bubble-img"/>
+                <!--<div id="cssBubble"></div>-->
+                <div class="bobble_text">
+                    <h2><a href="/">Bobble</a></h2>
+                </div>
+            </div>
+            <div class="home-link">
+                <h2><a href="/">Home</a></h2>
+            </div>
+            <div class="profile">
+                <img src="images/avatar_monkey.png" alt="User Avatar" class="avatar" style="cursor: pointer;">
+                <h2>DJ gamer</h2>
+                <p>Pro Need for Speed gamer</p>
+            </div>
+            
+            <div class="groups">
+                <h3>Groups/Forums</h3>
+                <div class="group" style="cursor: pointer;">Group 1 </div>
+                <div class="group" style="cursor: pointer;">Group 2</div>
+                <!-- Add more groups dynamically -->
+            </div>
+        </div>
+        <div class="main-content">
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search games...">
+                <button id="searchButton">Search</button>
+                 <!-- Dark Mode Toggle Button -->
+                <button id="darkModeToggle">Dark Mode</button>
+            </div>
+
+            <div class="games-container">
+                <a href="https://www.fortnite.com" class="game-link">
+                    <div class="game-box" style="background-image: url('images/fortnite.jpeg');"></div>
+                </a>
+                <a href="https://www.callofduty.com" class="game-link">
+                    <div class="game-box" style="background-image: url('images/cod.png');"></div>
+                </a>
+                <a href="https://www.ea.com/da-dk/games/ea-sports-fc" class="game-link">
+                    <div class="game-box" style="background-image: url('images/eafc.jpeg');"></div>
+                </a>
+                <div class="game-box more">more...</div> <!-- This remains a non-clickable div -->
+            </div>
+        
+            <!-- Input area for new post -->
+            <div class="new-post">
+                <div class="post-inputs-container">
+                    <textarea id="postInput" placeholder="What's on your mind?"></textarea>
+                    <div class="bottom-controls">
+                        <div id="imagePreviewContainer" class="image-preview-container"></div> <!-- Image preview container -->
+                        <label for="imageInput" class="image-upload-label">
+                            <img src="images/img_picture.png" alt="Attach" style="width: 24px; height: 24px;">
+                        </label>
+                    </div>
+                    <input type="file" id="imageInput" accept="image/*,video/*" style="display: none;">
+                </div>
+                <button id="postButton">Post Bobble</button>
+            </div>
+            
+            <!-- Area where posted bobbles will appear -->
+            <div id="postsContainer">
+                <!-- Example of existing post (You can remove this if you don't need a placeholder) -->
+                <!--<div class="content">
+                    <h3>Post Title</h3>
+                    <p>Post content...</p>
+                     Dynamic post content: images, memes, videos, text etc. -->
+                <!--</div> -->
+                <!-- More content posts -->
+            </div>
+        </div>
+        
+        <div class="right-side">
+
+            <button id="authButton">Sign In</button>
+            <button id="chatButton">Chat</button> <!-- Chat button -->
+            <div id="chatContainer" class="chat-container">
+                <!-- Chat UI goes here -->
+                <button id="closeChat" class="close-chat">X</button> 
+                <div id="chatMessages" class="chat-messages"></div>
+                <input type="text" id="chatInput" placeholder="Type a message..." class="chat-input">
+                <button id="sendMessageButton">Send</button>
+            </div>
+
+            <a href="https://y8.com" class="netgame-link">
+                <div class="netgame-box" style="background-image: url('images/y8_picture.png');"></div>
+            </a>
+            <a href="https://www.crazygames.com/" class="netgame-link">
+                <div class="netgame-box" style="background-image: url('images/crazy_games.png');"></div>
+            </a>
+            <a href="https://poki.com" class="netgame-link">
+                <div class="netgame-box" style="background-image: url('images/poki.png');"></div>
+            </a>
+
+            <!-- Future space for advertisements -->
+        </div>
+
+    </div>
+</body>
+</html>
+
